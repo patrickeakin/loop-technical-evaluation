@@ -7,7 +7,9 @@ test.beforeEach(login)
 
 testCases.forEach(data => {
     test(`${data.name}`, async ({ page }) => {
-        await page.getByLabel(data.leftNav).click()
+        await test.step('Click on project in sidebar', async () => {
+            await page.getByLabel(data.leftNav).click()
+        })
         await expect(
             page.locator('.BoardBody-column', { has: page.getByText(data.column) })
             .locator('.BoardCardLayout', { has: page.getByText(data.card_title)})
