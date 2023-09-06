@@ -1,5 +1,5 @@
-{
-    "test_case_1": {
+[
+    {
         "id": 1,
         "name": "Test Case 1",
         "leftNav": "Cross-functional project plan, Project",
@@ -10,7 +10,7 @@
             "On track"
         ]
     },
-    "test_case_2":{
+    {
         "id": 2,
         "name": "Test Case 2",
         "leftNav": "Cross-functional project plan, Project",
@@ -21,7 +21,7 @@
             "At risk"
         ]
     },
-    "test_case_3":{
+    {
         "id": 3,
         "name": "Test Case 3",
         "leftNav": "Cross-functional project plan, Project",
@@ -32,7 +32,7 @@
             "Off track"
         ]
     },
-    "test_case_4":{
+    {
         "id": 4,
         "name": "Test Case 4",
         "leftNav": "Work Requests",
@@ -45,7 +45,7 @@
             "Not Started"
         ]
     },
-    "test_case_5":{
+    {
         "id": 5,
         "name": "Test Case 5",
         "leftNav": "Work Requests",
@@ -58,7 +58,7 @@
             "Waiting"
         ]
     },
-    "test_case_6":{
+    {
         "id": 6,
         "name": "Test Case 6",
         "leftNav": "Work Requests.",
@@ -71,4 +71,4 @@
             "Done"
         ]
     }
-}
+]
