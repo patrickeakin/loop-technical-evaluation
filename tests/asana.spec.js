@@ -1,5 +1,6 @@
 // @ts-check
 const { test, expect } = require('@playwright/test');
+const testCases = JSON.parse(JSON.stringify(require('./testCases.json')))
 
 const login = async ({ page }) => {
     await page.goto('https://app.asana.com/-/login')
@@ -12,6 +13,7 @@ const login = async ({ page }) => {
 test.beforeEach(login)
 
 test('Test Case', async ({ page }) => {
+    console.log(testCases)
     await test.step('Select project in side bar"', async () => {
         await page.click('[aria-label="Cross-functional project plan, Project"]')
     })
