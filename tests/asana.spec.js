@@ -13,5 +13,6 @@ const login = async ({ page }) => {
 test.beforeEach(login)
 
 test('Test Case', async ({ page }) => {
-  
+  await page.click('[aria-label="Cross-functional project plan, Project"]')
+  await expect(page.locator('.BoardBody-column', { has: page.locator('text="To do"') }).getByText('Draft project brief')).toBeVisible()
 })
