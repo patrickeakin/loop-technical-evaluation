@@ -12,10 +12,10 @@ testCases.forEach(data => {
             page.locator('.BoardBody-column', { has: page.getByText(data.column) })
             .locator('.BoardCardLayout', { has: page.getByText(data.card_title)})
             ).toBeVisible()
-        await data.tags.forEach(tag => {
+        for (let i = 0; i < data.tags.length; i++) {
             expect(page.locator('.BoardCardLayout', { has: page.getByText(data.card_title) })
             .locator('.BoardCardCustomPropertiesAndTags')
-            ).toContainText(tag)    
-        })
+            ).toContainText(data.tags[i])   
+        }
     })
 })
