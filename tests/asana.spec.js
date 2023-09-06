@@ -10,14 +10,17 @@ const login = async ({ page }) => {
     await page.click('.LoginPasswordForm-loginButton')
   }
 
+
 test.beforeEach(login)
 
-test('Test Case', async ({ page }) => {
-    console.log(testCases)
-    await test.step('Select project in side bar"', async () => {
-        await page.click('[aria-label="Cross-functional project plan, Project"]')
+testCases.forEach(data => {
+    test(`${data.name}`, async ({ page }) => {
+        console.log(testCases)
+        await page.click(`[aria-label="${data.leftNav}"]`)
+        await expect(page.locator('.BoardBody-column', { has: page.locator(`text="${data.column}"`) }).locator('.BoardCardLayout', { has: page.locator(`text="${data.card_title}"`)})).toBeVisible()
+        await data.tags.forEach(tag => {
+            expect(page.locator('.BoardCardLayout', { has: page.locator(`text="${data.card_title}"`)})
+            .locator('.BoardCardCustomPropertiesAndTags')).toContainText(tag)    
+        })
     })
-    await expect(page.locator('.BoardBody-column', { has: page.locator('text="To do"') }).locator('.BoardCardLayout', { has: page.locator('text="Draft project brief"')})).toBeVisible()
-    await expect(page.locator('.BoardCardLayout', { has: page.locator('text="Draft project brief"')}).locator('.BoardCardCustomPropertiesAndTags')).toContainText('Low')
-    await expect(page.locator('.BoardCardLayout', { has: page.locator('text="Draft project brief"')}).locator('.BoardCardCustomPropertiesAndTags')).toContainText('On track')
 })
