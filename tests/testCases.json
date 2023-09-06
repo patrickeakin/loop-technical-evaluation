@@ -1,0 +1,74 @@
+{
+    "test_case_1": {
+        "id": 1,
+        "name": "Test Case 1",
+        "leftNav": "Cross-functional project plan, Project",
+        "column": "To Do",
+        "card_title": "Draft project brief",
+        "tags": [
+            "Low",
+            "On track"
+        ]
+    },
+    "test_case_2":{
+        "id": 2,
+        "name": "Test Case 2",
+        "leftNav": "Cross-functional project plan, Project",
+        "column": "To Do",
+        "card_title": "Schedule kickoff meeting",
+        "tags": [
+            "Medium",
+            "At risk"
+        ]
+    },
+    "test_case_3":{
+        "id": 3,
+        "name": "Test Case 3",
+        "leftNav": "Cross-functional project plan, Project",
+        "column": "To Do",
+        "card_title": "Share timeline with teammates",
+        "tags": [
+            "High",
+            "Off track"
+        ]
+    },
+    "test_case_4":{
+        "id": 4,
+        "name": "Test Case 4",
+        "leftNav": "Work Requests",
+        "column": "New Requests",
+        "card_title": "[Example] Laptop setup for new hire",
+        "tags": [
+            "Medium priority",
+            "Low effort",
+            "New hardware",
+            "Not Started"
+        ]
+    },
+    "test_case_5":{
+        "id": 5,
+        "name": "Test Case 5",
+        "leftNav": "Work Requests",
+        "column": "In Progress ",
+        "card_title": "Draft project brief",
+        "tags": [
+            "Low priority",
+            "Low effort",
+            "Password reset",
+            "Waiting"
+        ]
+    },
+    "test_case_6":{
+        "id": 6,
+        "name": "Test Case 6",
+        "leftNav": "Work Requests.",
+        "column": "Completed",
+        "card_title": "[Example] New keycard for Daniela V",
+        "tags": [
+            "High priority",
+            "Low effort",
+            "New hardware",
+            "Done"
+        ]
+    }
+}
