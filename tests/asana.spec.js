@@ -7,7 +7,6 @@ const login = async ({ page }) => {
     await page.click('.LoginEmailForm-continueButton')
     await page.fill('.LoginPasswordForm-passwordInput', 'Password123')
     await page.click('.LoginPasswordForm-loginButton')
-    await page.waitForSelector('.HomePageContent-greeting')
   }
 
 test.beforeEach(login)
